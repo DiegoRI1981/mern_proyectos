@@ -8,6 +8,7 @@ import ProjectPage from '../pages/ProjectPage'
 import UsersPage from '../pages/admin/UsersPage'
 import NotFoundPage from '../pages/NotFoundPage'
 import Layout from '../components/layouts/Layout'
+import PrivateRoute from './PrivateRoute'
 
 export default function AppRouter() {
     return (
@@ -17,10 +18,12 @@ export default function AppRouter() {
                     <Route exact path="/" element={<HomePage />} />
                     <Route exact path="/login" element={<LoginPage />} />
                     <Route exact path="/register" element={<RegisterPage />} />
-                    <Route exact path="/account" element={<AccountPage />} />
-                    <Route exact path="/projects" element={<ProjectsPage />} />
-                    <Route exact path="/project/:projectId" element={<ProjectPage />} />
-                    <Route exact path="/admin/users" element={<UsersPage />} />
+                    <Route exact path="/" element={<PrivateRoute />}>
+                        <Route exact path="/account" element={<AccountPage />} />
+                        <Route exact path="/projects" element={<ProjectsPage />} />
+                        <Route exact path="/project/:projectId" element={<ProjectPage />} />
+                        <Route exact path="/admin/users" element={<UsersPage />} />
+                    </Route>
 
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>

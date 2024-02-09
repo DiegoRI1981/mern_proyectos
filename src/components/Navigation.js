@@ -7,7 +7,7 @@ export default function Navigation() {
             <Navbar.Brand as={NavLink} to='/'>Task Manager</Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
-                <Nav className='container text-center'>
+                <Nav className='container'>
                     <Nav.Link as={NavLink} to='/projects'>Proyects</Nav.Link>
                     <NavDropdown title='Admin'>
                         <NavDropdown.Item as={NavLink} to='/admin/users'>Users</NavDropdown.Item>
