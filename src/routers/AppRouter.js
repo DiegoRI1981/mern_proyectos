@@ -23,7 +23,6 @@ export default function AppRouter() {
                         <Route exact path="/projects" element={<ProjectsPage />} />
                         <Route exact path="/project/:projectId" element={<ProjectPage />} />
                         <Route exact path="/admin/users" element={<UsersPage />} />
-
                     </Route>
 
                     <Route path="*" element={<NotFoundPage />} />
