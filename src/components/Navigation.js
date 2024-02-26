@@ -9,7 +9,7 @@ export default function Navigation() {
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='container'>
-                    <Nav.Link as={NavLink} to='/projects'>Proyects</Nav.Link>
+                    <Nav.Link as={NavLink} to='/projects'>Projects</Nav.Link>
                     <NavDropdown title='Admin'>
                         <NavDropdown.Item as={NavLink} to='/admin/users'>Users</NavDropdown.Item>
                     </NavDropdown>
